@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    display: none;
+    position: relative;
+    width: 400px;
+    min-height: 300px;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .task-icon, .search-box {
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+  }
+
+  .task-icon {
+    right: 20px;
+    font-size: 40px;
+    margin-bottom:-10px ;
+  }
+
+  .search-box {
+    left: 20px;
+  }
+  .inp{
+    width: 300px;
+  }
+  
+  .new-task-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .new-task-screen.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .new-task-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .task-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .edit-icon, .delete-icon, .clear-all-icon {
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .edit-icon {
+    right: 55px;
+  }
+
+  .delete-icon {
+    right: 30px;
+  }
+
+  .clear-all-icon {
+    right: 45px;
+    top: 295px;
+    font-size: 40px;
+  }
