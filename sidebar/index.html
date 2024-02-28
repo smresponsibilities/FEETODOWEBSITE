@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Dashboard Side Menu | Dark-Light Mode</title>
+    </head>
+    <body>
+        <nav class="sidebar close ">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo1.jpg" alt="logo">
+                    </span>
+                    
+                    <div class="text header-text">
+                        <span class ="name">Task Manager</span>
+                        <!-- <span class ="profession">Projects</span> -->
+                        
+                    </div>
+                </div>
+                <i class="bx bx-menu toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <!-- <li class="search-box">
+                        <a href="#">
+                            <i class="bx bx-search icon"></i>
+                            <input type="search" placeholder="Search...">
+                        </a>
+                    </li> -->
+                    <ul class="menu-link">
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="bx bx-user icon"></i>
+                                <span class="text nav-text">Profile</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="bx bx-home-alt icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="bx bx-task icon"></i>
+                                <span class="text nav-text">Projects</span>
+                            </a>
+                        </li>                       
+                  </ul>
+                </div>
+                <div class="bottom-content">
+                    <ul id="list-container">
+                        <!-- <li class="checked ">Task 1</li>
+                        <li>Task 2</li>
+                        <li>Task 3</li> -->
+                    </ul>
+
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add the task">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class="bx bx-share icon"></i>
+                            <span class="text nav-text">Share</span>
+                            
+                        </a>
+                    </li>  -->
+                    
+
+                    <li class="mode">
+                        <div class = "moon-sun">
+                            <i class="bx bx-moon icon moon"></i>
+                            <i class="bx bx-sun icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+
+                    </li> 
+                </div>
+            </div>
+        </nav>
+        <script src="script.js"></script>
+    </body>
+</html>
