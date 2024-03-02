@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <nav>
+        <a href="#">logo</a>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">calender</a>
+        <a href="#">Tasks</a>
+        <a href="#">login</a>
+        <div class="animation"></div>
+        
+    </nav>
+    <div class="border">
+
+    </div>
+
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="logo1.jpg" alt="profile_picture">
+                <h3>Task-Manager</h3>
+                <!-- <p>Designer</p> -->
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tasks"></i></span>
+                        <span class="item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Performance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-share"></i></span>
+                        <span class="item">Share</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu">
+                <ul >
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="f">
+
+
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class ="fa-brands fa-facebook"></i></a>
+                <a href=""><i class ="fa-brands fa-instagram"></i></a>
+                <a href=""><i class ="fa-brands fa-twitter"></i></a>
+                <a href=""><i class ="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class ="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul type="none">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2024;Designd by <span class = "designer">abc</span> </p>
+            </div>
+        </div>
+   
+</div>
+  <script>
+var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+nav{
+	position: relative;
+	height: 50px;
+	background-image: linear-gradient(to bottom, #070a0c, #717478);
+    
+     /* background-image: black; */
+	
+	font-size: 0;
+}
+nav a {
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    transition: all 0.4s ease; /* Add transition for smooth effect */
+    z-index: 0;
+    top: 0;
+    height: 100%;
+    
+    background-color: #EE445F; /* Initial background color */
+    width: 0; /* Initial width */
+    left: 0; /* Initial position */
+}
+a:nth-child(1){
+    width:220px;
+}
+a:nth-child(2){
+    width:220px;
+}
+a:nth-child(3){
+    width:220px;
+}
+a:nth-child(4){
+    width:220px;
+}
+a:nth-child(5){
+    width:220px;
+}
+a:nth-child(6){
+    width:220px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 220px;
+	left: 0;
+	background-color: #EE445F;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 220px;
+	left: 220px;
+	background-color: #EE445F;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 220px;
+	left: 420px;
+	background-color: #EE445F;
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 220px;
+	left: 640px;
+	background-color: #EE445F;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 220px;
+	left: 860px;
+	background-color: #EE445F;
+}
+nav .start-contact, a:nth-child(6):hover~.animation {
+	width: 220px;
+	left: 1080px;
+	background-color: #EE445F;
+}
+.border{
+    background-color: #EE445F;
+    width:100%;
+    height:3px;
+}
+footer{
+	background-image: linear-gradient(to bottom, #070a0c, #717478);
+	margin-top:423px;
+}
+.footerContainerr{
+	width:100%;
+	padding:70px 30px 20px;
+}
+.socialIcons{
+	/* margin-top:20px; */
+	padding-top: 20px;
+	 padding-left: 550px; 
+    justify-content: center;
+	
+	
+}
+
+.socialIcons a{
+	text-decoration: none;
+	padding:10px;
+	font-size: x-small;
+	background-color: #717478;
+	margin:10px;
+	border-radius:50%;
+}
+.socialIcons a i{
+font-size: 2em;
+color: black;
+opacity: 0.9;
+
+}
+
+ .socialIcons a:hover{
+background-color: #111;
+transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+color: white;
+transition: 0.5s;
+}
+
+    *{
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body{
+        background: #f5f6fa;
+    }
+    .wrapper{
+        margin-top: -50px;
+    }
+    .wrapper .sidebar{
+        background-image: linear-gradient(to bottom, #070a0c, #717478);
+        padding-top:110px;
+        position: relative;
+        left: 0;
+        width: 225px;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+        justify-content: space-between;
+    }
+    .wrapper .sidebar .profile{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .wrapper .sidebar .profile img{
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    
+    .wrapper .sidebar .profile h3{
+        color: #ffffff;
+        margin: 10px 0 5px;
+    }
+    
+    .wrapper .sidebar .profile p{
+        color: rgb(206, 240, 253);
+        font-size: 14px;
+    }
+    .wrapper .sidebar ul li a{
+        display: block;
+        padding: 13px 30px;
+        border-bottom: 1px solid #10558d;
+        color: rgb(241, 237, 237);
+        font-size: 16px;
+        position: relative;
+    }
+    
+    .wrapper .sidebar ul li a .icon{
+        color: #dee4ec;
+        width: 30px;
+        display: inline-block;
+    }
+    .wrapper .sidebar ul li a:hover,
+    .wrapper .sidebar ul li a.active{
+        color: #0c7db1;
+    
+        background:white;
+        border-right: 2px solid rgb(5, 68, 104);
+    }
+    
+    .wrapper .sidebar ul li a:hover .icon,
+    .wrapper .sidebar ul li a.active .icon{
+        color: #0c7db1;
+    }
+    
+    .wrapper .sidebar ul li a:hover:before,
+    .wrapper .sidebar ul li a.active:before{
+        display: block;
+    }
+    .wrapper .section{
+        width: calc(100% - 225px);
+        margin-left: 225px;
+        transition: all 0.5s ease;
+    }
+    .top_navbar .hamburger a .fas.fa-bars {
+           margin-top: 83px;
+           margin-left: -19px;
+                color: black;
+            }
+    .wrapper .section .top_navbar{
+        height: 50px;
+        color:black;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+    
+    }
+    
+    .wrapper .section .top_navbar .hamburger a{
+        font-size: 28px;
+        color: #f4fbff;
+    }
+    
+    .wrapper .section .top_navbar .hamburger a:hover{
+        color: #a2ecff;
+    }
+    body.active .wrapper .sidebar{
+        left: -225px;
+    }
+    
+    body.active .wrapper .section{
+        margin-left: 0;
+        width: 100%;
+    }
+    .sidebar .menu {
+        display: flex;
+        top: 40%;
+        bottom: 0%;
+    }
+
+    .wrapper .sidebar:hover{
+        width: 270px;
+    }
+
+
+.f{
+    background-color: #070a0c;
+}
+    .footerNav{
+
+        margin: 30px 0;
+        }
+        
+        .footerNav ul{
+        
+        display: flex;
+        
+        justify-content: center;
+        }
+        
+        .footerNav ul li a{
+        
+        color: white;
+        
+        margin: 20px;
+        
+        text-decoration: none;
+        
+        font-size: 1.3em;
+        
+        opacity: 0.7;
+        
+        transition: 0.5s;
+        
+        }
+        
+        .footerNav ul li a:hover{
+        
+        opacity: 1;
+        }
+        .footerBottom{
+        background-color: #161414;
+        
+        padding: 20px;
+        
+        text-align: center;
+        }
+        
+        .footerBottom p{
+        
+            color: white;
+            
+            }
+            
+            .designer{
+            
+            opacity: 0.7;
+            
+            text-transform: uppercase;
+            
+            letter-spacing: 1px;
+            
+            font-weight: 400;
+            
+            margin: 0px 5px;
+            
+            }
+            
+            @media (max-width: 700px){
+                .footerNav ul{
+                    flex-direction: column;
+                }
+                .footerNav ul li{
+                    width:100%;
+                    text-align: center;
+                    margin:10px;
+                }
+            } 
