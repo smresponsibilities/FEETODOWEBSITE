@@ -22,7 +22,6 @@ body {
   padding: 20px;
   text-align: center;
   overflow-x: hidden;
-  
 }
 .greet_img {
   margin-bottom: 30px; /* Add margin to separate it from the content below */
@@ -34,7 +33,9 @@ body {
   display: block; /* Center the image horizontally */
   margin: 0 auto; /* Center the image horizontally */
 }
-.task-icon-greet, .search-box-greet, .change-color-icon-greet{
+.task-icon-greet,
+.search-box-greet,
+.change-color-icon-greet {
   position: absolute;
   cursor: pointer;
   /* overflow: hidden; */
@@ -42,12 +43,10 @@ body {
 .task-icon-greet {
   bottom: 3px;
   left: 290px;
-  
 }
 .search-box-greet {
   bottom: 10px;
   left: 105px;
-  
 }
 /* .change-color-icon-greet{
   bottom: 5px;
@@ -55,46 +54,45 @@ body {
 
 } */
 
-.task-icon, .search-box, .change-color-icon {
+.task-icon,
+.search-box,
+.change-color-icon {
   position: absolute;
-  
+
   bottom: auto;
   cursor: pointer;
 }
 
 .task-icon {
-  position:absolute ;
+  position: absolute;
   top: 80px;
   right: 145px;
   z-index: 1;
 }
-.add-icon{
+.add-icon {
   height: 25px;
-  
 }
-.add-icon1{
+.add-icon1 {
   height: 25px;
-  
 }
 
 .search-box {
-  position:absolute ;
+  position: absolute;
   top: 80px;
   right: 180px;
   z-index: 1;
-  
 }
 
 .change-color-icon {
-  position:absolute ;
+  position: absolute;
   top: 80px;
   right: 115px;
   z-index: 1;
-  
 }
+
 #tasksContainer {
-position: relative; /* Make sure the tasks container is relative to allow absolute positioning */
-padding-top: 50px; /* Adjust as needed based on the height of search box and add button */
+  position: relative; /* Make sure the tasks container is relative to allow absolute positioning */
+  padding-top: 50px; /* Adjust as needed based on the height of search box and add button */
 }
 
 .new-task-screen {
@@ -116,9 +114,29 @@ padding-top: 50px; /* Adjust as needed based on the height of search box and add
 
 .new-task-form {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 58vh;
+}
+
+.inner-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  gap: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .task-item {
@@ -129,7 +147,9 @@ padding-top: 50px; /* Adjust as needed based on the height of search box and add
   position: relative;
 }
 
-.edit-icon, .delete-icon, .clear-all-icon {
+.edit-icon,
+.delete-icon,
+.clear-all-icon {
   position: absolute;
   top: 5px;
   cursor: pointer;
@@ -152,7 +172,7 @@ padding-top: 50px; /* Adjust as needed based on the height of search box and add
   font-size: 100px;
   z-index: 1;
 }
-.clear-all{
+.clear-all {
   height: 25px;
 }
 
@@ -163,19 +183,17 @@ padding-top: 50px; /* Adjust as needed based on the height of search box and add
   margin: 5px;
   cursor: pointer;
 }
-.color-icon{
+.color-icon {
   position: absolute;
   height: 25px;
   right: -2px;
   top: -2px;
-  
-  
 }
 
 .color-picker-form {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
 }
