@@ -26,6 +26,14 @@ function setDefaultDate(taskDate, taskTime) {
   taskTime.value = time;
 }
 
+let current_color = "#000000";
+
+function takeColor(color) {
+  current_color = color;
+
+  console.log(current_color);
+}
+
 function addTask() {
   var taskName = document.getElementById("taskName").value;
   var taskDescription = document.getElementById("taskDescription").value;
@@ -81,34 +89,54 @@ function displayTasks() {
   tasksArray.forEach(function (task, index) {
     var taskElement = document.createElement("div");
     taskElement.classList.add("task-item");
-    taskElement.style.backgroundColor =
-      document.getElementById("taskListCard").style.backgroundColor;
-    taskElement.innerHTML =
-      "<h3>" +
-      task.name +
-      "</h3><p>" +
-      task.description +
-      "</p><p>Date: " +
-      task.date +
-      "</p><p>Time: " +
-      task.time +
-      "</p>";
-    var editIcon = document.createElement("div");
-    editIcon.classList.add("edit-icon");
-    editIcon.innerHTML = '<img class="edit-icon" src="Images/edit.png" alt="">';
-    editIcon.onclick = function () {
-      editTask(index);
-    };
-    var deleteIcon = document.createElement("div");
-    deleteIcon.classList.add("delete-icon");
-    deleteIcon.innerHTML =
-      '<img class="delete-icon" src="Images/delete.png" alt="">';
-    deleteIcon.onclick = function () {
-      deleteTask(index);
-    };
-    taskElement.appendChild(editIcon);
-    taskElement.appendChild(deleteIcon);
-    tasksContainer.appendChild(taskElement);
+
+    switch (current_color) {
+      case "#fcf6bd":
+        taskElement.classList.add("fcf6bd");
+        break;
+      case "#70d6ff":
+        taskElement.classList.add("70d6ff");
+        // handle color #70d6ff
+        break;
+      case "#9381ff":
+        taskElement.classList.add("9381ff");
+        // handle color #9381ff
+        break;
+      // add more cases as needed
+      default:
+        taskElement.classList.add("000000");
+        // handle unknown color
+
+        taskElement.style.backgroundColor =
+          document.getElementById("taskListCard").style.backgroundColor;
+        taskElement.innerHTML =
+          "<h3>" +
+          task.name +
+          "</h3><p>" +
+          task.description +
+          "</p><p>Date: " +
+          task.date +
+          "</p><p>Time: " +
+          task.time +
+          "</p>";
+        var editIcon = document.createElement("div");
+        editIcon.classList.add("edit-icon");
+        editIcon.innerHTML =
+          '<img class="edit-icon" src="Images/edit.png" alt="">';
+        editIcon.onclick = function () {
+          editTask(index);
+        };
+        var deleteIcon = document.createElement("div");
+        deleteIcon.classList.add("delete-icon");
+        deleteIcon.innerHTML =
+          '<img class="delete-icon" src="Images/delete.png" alt="">';
+        deleteIcon.onclick = function () {
+          deleteTask(index);
+        };
+        taskElement.appendChild(editIcon);
+        taskElement.appendChild(deleteIcon);
+        tasksContainer.appendChild(taskElement);
+    }
   });
 
   if (tasksArray.length === 0) {
@@ -195,7 +223,12 @@ function deleteTask(index) {
 }
 
 function changeColor(color) {
-  document.getElementById("taskListCard").style.backgroundColor = color;
+  let task_list = document.getElementsByClassName("task-item");
+
+  task_list.map((task) => {
+    task.style.backgroundColor = color;
+  });
+
   var boxShadowColor = getComputedStyle(document.getElementById("taskListCard"))
     .boxShadow.split(" ")
     .pop();
