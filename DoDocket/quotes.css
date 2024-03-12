@@ -1,0 +1,23 @@
+.fa-quote-left{
+
+        background:linear-gradient(to  right, #80ff80 0%,#59fcc3 10%,#56e2cb 40%, #4555fd 100%);
+        background-clip:text; /* For WebKit browsers */
+        color: transparent; /* Makes the text itself transparent to reveal the gradient background */
+    
+}
+.quoteandicon{
+    background:linear-gradient(to  right,#59fcc3 0%, #4555fd 50%);
+    background-clip:text; /* For WebKit browsers */
+    color: transparent; 
+        font-size: 24px; /* Adjust the font size as desired */
+        font-weight: bold;
+        background-size: contain;
+      }
+#quotesjsfetcher{
+    color: #ffffff;
+}
+.quotes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

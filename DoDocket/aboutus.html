@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <script src="https://kit.fontawesome.com/1d01b17507.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+ 
+
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+        .page-container {
+            
+            background-color: #0B1215 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 93vh;
+            margin: 0;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            transition: transform 0.6s;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-container.flipped .card {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .front {
+            background: linear-gradient(to bottom right, #59fcc3, #4555fd);
+        }
+
+        .back {
+            background: linear-gradient(to bottom right, #4555fd, #59fcc3);
+            transform: rotateY(180deg);
+        }
+
+        .back h2,
+        .back ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+         
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+
+</button>
+<div class="collapse navbar-collapse" id="mainContent">
+    <ul class="navbar-nav ml-auto">
+        <div class="nav-list">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link"  href="javascript:void(0);"> <img src="./favicon_io1/apple-touch-icon.png" alt="" > </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="./index.html"><i class="fas fa-tachometer-alt"></i>Home</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i> About Us </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="https://us22.list-manage.com/contact-form?u=5b16eb939906a7f28984cbfca&form_id=e6c7ac9578a8de37246b4deda52bb18f"><i
+                    class="far fa-clone"></i> Contact Us </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tasks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Login.html"><i class="fa-regular fa-circle-user"></i> Login </a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+        </li> -->
+    </ul>
+</div>
+</nav>
+
+
+
+
+<div class="sidebar">
+    <div class="nav-bar" id="nav-bar">
+        <input id="nav-toggle" type="checkbox" />
+        <div id="nav-header"><a id="nav-title" href="#"><img src="./favicon_io1/apple-touch-icon.png" alt="" style="height: 52px;position:relative;padding:10px;top:15px ">Do Docket</a>
+            <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+            <hr />
+        </div>
+        <div id="nav-content">
+            <div class="nav-button"><a href="./index.html"><i class="fas fa-palette"></i><span>Your Tasks</span></a></div>
+            <div class="nav-button" onclick="openWhiteboardPopup()"><i class="fas fa-images"></i><span>Whiteboard</span></div>
+
+            
+            <div class="nav-button" onclick="openTimerPopup()"><i class="fas fa-thumbtack"></i><span>Timer</span></div>
+            <hr/>
+            
+            <div class="nav-button" onclick="showNewTaskScreen()"><i class="fas fa-heart"></i><span>Add Task</span></div>
+            <div class="nav-button" onclick="clearAll()"><i class="fas fa-chart-line"></i><span>Clear All</span></div>
+            <div class="nav-button"> <a href="https://us22.list-manage.com/contact-form?u=5b16eb939906a7f28984cbfca&form_id=e6c7ac9578a8de37246b4deda52bb18f"><i class="fas fa-fire"></i><span>Help</span></a></div>
+            <div class="nav-button"><i class="fas fa-magic"></i><span>Do-Docket Pro</span></div>
+            <hr />
+            
+            <div id="nav-content-highlight"></div>
+        </div>
+        <input id="nav-footer-toggle" type="checkbox" />
+        <div id="nav-footer">
+            <div id="nav-footer-heading">
+                <div id="nav-footer-avatar"><img
+                        src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547" /></div>
+                <div id="nav-footer-titlebox"><a id="nav-footer-title" href="#" target="_blank">Shivam</a><span
+                        id="nav-footer-subtitle">Admin</span></div>
+                <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+            </div>
+            <div id="nav-footer-content">
+                <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</Lorem>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="page-container">
+    <div class="card-container" id="card-container">
+        <div class="card">
+            <div class="card-face front" id="front">
+
+                
+<h2>About Us</h2>
+<p>We worked together on this project as a team(which we have). Our goal was to create a todo webite which we achieved by doing a lot of efficient todos.</p>
+<p>Coincently we got this gmail that was based on our project name, so kindly help it be in use by emailing to it:</p>
+<p>Email: dodocket@gmail.com</p>
+            </div>
+            <div class="card-face back" id="back">
+                <h2>Team Members</h2>
+                <ul>
+                  <li>&nbsp;</li>
+                  
+                    <li>Sejal Bansal</li>
+        <li>&nbsp;</li>
+                    <li>Sheenam Dubey</li>
+                    <li>&nbsp;</li>
+                    <li>Shivam Gupta</li>
+                    <li>&nbsp;</li>
+                    <li>Shivam Mahajan</li>
+                    <li>&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    
+    <footer class="footer">
+        <img src="./Images/footeer_logo.png" alt="">
+        <p>A simple todolist with inspiration from everywhere.</p>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p> ©2024 Do Docket.</p>
+
+    </footer>
+
+   <script>
+        const cardContainer = document.getElementById('card-container');
+        let isFlipped = false;
+
+        cardContainer.addEventListener('click', () => {
+            if (isFlipped) {
+                cardContainer.classList.remove('flipped');
+                isFlipped = false;
+            } else {
+                cardContainer.classList.add('flipped');
+                isFlipped = true;
+            }
+        });
+    </script>
+        <script src="nav.js"></script>
+
+        
+</body>

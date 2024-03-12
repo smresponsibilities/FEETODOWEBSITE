@@ -1,0 +1,316 @@
+
+*{
+  margin:0px;
+  box-sizing: border-box;
+  
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Urbanist", sans-serif;
+  font-weight:200;
+  background-color:black;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+}
+.centercontent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+  height: 95%;
+ 
+}
+
+.card {
+  display: none;
+  top: 150px;
+  /* left: 500px; */
+  position: absolute;
+  /* right: 50%; */
+  width: 400px;
+  height: auto;
+  max-height: 79%;
+ /* margin-left: 40%; */
+  /* overflow-y: auto; */
+  background-color: #f2e9fe;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px ;
+  text-align: center;
+  /* overflow-x: hidden; */
+  /* left: 80px; */
+  margin-bottom: 350px;
+  /* margin-top: 100px; */
+  /* overflow-y: scroll;  */
+  overflow: auto; 
+  
+}
+
+
+
+.card::-webkit-scrollbar {
+  width: 10px; /* Customize scrollbar width as needed */
+}
+
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #888; /* Customize scrollbar thumb color */
+  border-radius: 10px; /* Customize scrollbar thumb border-radius */
+}
+
+/* Custom arrows for scrollbar */
+.card::-webkit-scrollbar-button:start:decrement {
+  background-color: transparent;
+}
+
+.card::-webkit-scrollbar-button:end:increment {
+  background-color: transparent;
+}
+
+.card::-webkit-scrollbar-button {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.card::-webkit-scrollbar-button:start:decrement::before,
+.card::-webkit-scrollbar-button:end:increment::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent transparent transparent;
+}
+
+.card::-webkit-scrollbar-button:start:decrement::before {
+  border-width: 5px 5px 0 5px; /* Creates an upwards arrow */
+}
+
+.card::-webkit-scrollbar-button:end:increment::before {
+  border-width: 0 5px 5px 5px; /* Creates a downwards arrow */
+}
+
+#goodMorningCard{
+  margin-top: 0px;
+  height:600px;
+  width:900px;
+  margin-left: 250px;
+  overflow: hidden;
+}
+
+.greet_img {
+  margin-bottom: 30px; /* Add margin to separate it from the content below */
+}
+
+.greet_img img {
+  height: 110%; /* Let the height adjust proportionally */
+  width: 100%;
+  display: block; /* Center the image horizontally */
+  margin: 0 auto; /* Center the image horizontally */
+}
+.task-icon-greet, .search-box-greet, .change-color-icon-greet{
+  position: absolute;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+.task-icon-greet {
+  bottom: 3px;
+  left: 500px;
+
+  
+}
+.search-box-greet {
+  bottom: 10px;
+  left: 325px;
+  
+  
+}
+/* .change-color-icon-greet{
+  bottom: 5px;
+  left: 280px;
+
+} */
+
+.task-icon, .search-box, .change-color-icon {
+  position: absolute;
+  
+  bottom: auto;
+  cursor: pointer;
+}
+
+.task-icon {
+  position:absolute ;
+  top: 80px;
+  right: 110px;
+  z-index: 1;
+}
+.add-icon{
+  height: 25px;
+  
+}
+.add-icon1{
+  height: 25px;
+  
+}
+
+.search-box {
+  position:absolute ;
+  top: 80px;
+  right: 140px;
+  z-index: 1;
+  
+}
+
+.change-color-icon {
+  position:absolute ;
+  top: 80px;
+  right: 115px;
+  z-index: 1;
+  
+}
+#tasksContainer {
+position: relative; /* Make sure the tasks container is relative to allow absolute positioning */
+padding-top: 50px; /* Adjust as needed based on the height of search box and add button */
+}
+
+.new-task-screen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.new-task-screen.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  
+}
+/* .new-task-form h2{
+  
+  text-align:center;
+  top: 0px;
+} */
+.new-task-form form{
+  position: absolute;
+  top: 225px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  
+  padding-left: 265px;
+  background-color: #f2e9fe;
+
+}
+.new-task-form form button{
+  background-color: #f2e9fe;
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.color-picker-form{
+  background-color: #f2e9fe;
+}
+.new-task-form {
+  margin-top: 800px;
+  margin-right: 450px;
+  
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.task-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  position: relative;
+}
+
+.edit-icon, .delete-icon, .clear-all-icon {
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  
+}
+
+.edit-icon {
+  right: 30px;
+  height: 25px;
+}
+
+.delete-icon {
+  right: 10px;
+  /* top: 3px; */
+  height: 25px;
+}
+
+.clear-all-icon {
+  top: 10px;
+  right: 80px;
+  font-size: 100px;
+  z-index: 1;
+}
+.clear-all{
+  height: 25px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+.color-icon{
+  position: absolute;
+  height: 25px;
+  right: -2px;
+  top: -2px;
+  
+  
+}
+
+.color-picker-form {
+  background-color:#f2e9fe;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  justify-content: center;
+}
+
+.fcf6bd {
+  box-shadow: 0px 3.5px 0px 0px #fcf6bd;
+  border-color: #fcf6bd;
+}
+
+.task-item {
+  border-radius: 20px;
+  
+  margin-top: 20px;
+   
+  
+    border-top-left-radius: 27px solid  rgba(0, 0, 0, 0.8);
+    border-top: 2px solid  rgba(0, 0, 0, 0.8);
+    border-right: 2px solid  rgba(0, 0, 0, 0.8);
+ 
+   
+    /* border:  2px solid  rgba(0, 0, 0, 0.8); */
+ /* Adjust border style as needed */
+    box-shadow: -10px 8px 2px -1px rgba(0, 0, 0, 0.8);
+    /* Other styling properties */
+}

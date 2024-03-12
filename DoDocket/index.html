@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Docket</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addtask.css">
+    <link rel="stylesheet" href="quotes.css">
+    <link rel="stylesheet" href="footer.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io1/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io1/site.webmanifest">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1d01b17507.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+
+/* Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style the iframe */
+#whiteboardIframe,#timerIframe {
+  width: 100%;
+  height: 90%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+
+        </button>
+        <div class="collapse navbar-collapse" id="mainContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="nav-list">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link"  href="javascript:void(0);"> <img src="./favicon_io1/apple-touch-icon.png" alt="" > </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html"><i class="fas fa-tachometer-alt"></i>Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="aboutus.html"><i class="far fa-address-book"></i> About Us </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://us22.list-manage.com/contact-form?u=5b16eb939906a7f28984cbfca&form_id=e6c7ac9578a8de37246b4deda52bb18f"><i
+                            class="far fa-clone"></i> Contact Us </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html"><i class="fa-regular fa-circle-user"></i> Login </a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="quotes">
+
+        <!-- whole quotes functionality and structure -->
+        <div class="quotefull" style="width: 50%;margin: auto; line-height: 14px;">
+            <div class="quoteandicon">
+                <h3><i class="fa-solid fa-quote-left" style="text-align: center;"></i> Quotes </h3>
+            </div>
+            <div id="quotesjsfetcher" style="text-align: center;"> </div>
+        </div>
+        <!-- fetching quotes from js array -->
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="nav-bar" id="nav-bar">
+            <input id="nav-toggle" type="checkbox" />
+            <div id="nav-header"><a id="nav-title" href="#"><img src="./favicon_io1/apple-touch-icon.png" alt="" style="height: 52px;position:relative;padding:10px;top:15px ">Do Docket</a>
+                <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+                
+            </div>
+            <div id="nav-content">
+                <div class="nav-button"><a href="./index.html"><i class="fas fa-palette"></i><span>Your Tasks</span></a></div>
+                <div class="nav-button" onclick="openWhiteboardPopup()"><i class="fas fa-images"></i><span>Whiteboard</span></div>
+
+                
+                <div class="nav-button" onclick="openTimerPopup()"><i class="fas fa-thumbtack"></i><span>Timer</span></div>
+                <hr/>
+                
+                <div class="nav-button" onclick="showNewTaskScreen()"><i class="fas fa-heart"></i><span>Add Task</span></div>
+                <div class="nav-button" onclick="clearAll()"><i class="fas fa-chart-line"></i><span>Clear All</span></div>
+                <div class="nav-button"> <a href="https://us22.list-manage.com/contact-form?u=5b16eb939906a7f28984cbfca&form_id=e6c7ac9578a8de37246b4deda52bb18f"><i class="fas fa-fire"></i><span>Help</span></a></div>
+                <div class="nav-button"><i class="fas fa-magic"></i><span>Do-Docket Pro</span></div>
+                <hr />
+                
+                <div id="nav-content-highlight"></div>
+            </div>
+            <input id="nav-footer-toggle" type="checkbox" />
+            <div id="nav-footer">
+                <div id="nav-footer-heading">
+                    <div id="nav-footer-avatar"><img
+                            src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547" /></div>
+                    <div id="nav-footer-titlebox"><a id="nav-footer-title" href="#" target="_blank">Shivam</a><span
+                            id="nav-footer-subtitle">Admin</span></div>
+                    <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+                </div>
+                <div id="nav-footer-content">
+                    <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.</Lorem>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Sidebar -->
+    <div class="centercontent">
+    <audio id="alarmSound">
+        <source src="./alarm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- <img src="./Images/background.png" alt=""> -->
+    <p style="background-image: url('./Images/background.png');"></p>
+
+    <div class="card" id="goodMorningCard">
+        <h2>Good Evening</h2>
+        <p>Welcome!</p>
+        <div class="greet_img">
+            <img src="./Images/hemicircle2.png" alt="Greeting Image" />
+        </div>
+        <div class="search-box-greet">
+            <input type="text" placeholder="Add Your Task...">
+        </div>
+        <div class="task-icon-greet" onclick="showNewTaskScreen()">
+            <img class="add-icon1" src="Images/add-file.png" alt="Add Task Icon" />
+
+        </div>
+
+    </div>
+
+    <div class="card" id="taskListCard">
+
+        <h2>Task List</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Add Your Task...">
+        </div>
+        <div class="task-icon" onclick="showNewTaskScreen()">
+            <img class="add-icon" src="Images/add-file.png" alt="Add Task Button" />
+
+        </div>
+        
+        <div class="clear-all-icon" onclick="clearAll()">
+            <img class="clear-all" src="Images/reduce.png" alt="Clear All Button" />
+
+        </div>
+        <div id="tasksContainer"></div>
+    </div>
+
+    <div class="new-task-screen" id="newTaskScreen">
+        <div class="new-task-form">
+            
+            <form onsubmit="return addTask()">
+                <legend><h2>New Task</h2><br></legend>
+                <input type="text" id="userName" placeholder="Your Name" required><br><br>
+                <input type="email" id="userEmail" placeholder="Your Email" required><br><br>
+                <input type="text" id="taskName" placeholder="Task Name" required><br><br>
+                <textarea id="taskDescription" placeholder="Task Description" required></textarea><br><br>
+                <label for="taskDate">Date:</label>
+                <input type="date" id="taskDate" name="taskDate" required><br><br>
+                <label for="taskTime">Time:</label>
+                <input type="time" id="taskTime" name="taskTime" required><br><br>
+
+
+                <div class="color-picker-form">
+                    <!-- <h2>Change Color</h2> -->
+                    <div class="color-option" style="background-color: #fcf6bd" onclick="takeColor('#fcf6bd')"></div>
+                    <!-- <div
+                class="color-option"
+                style="background-color: #70d6ff"
+                onclick="changeColor('#70d6ff')"
+              ></div> -->
+                    <div class="color-option" style="background-color: #9381ff" onclick="takeColor('#9381ff')" le></div>
+                    <div class="color-option" style="background-color: #ff9770" onclick="takeColor('#ff9770')"></div>
+                    <div class="color-option" style="background-color: #fb6f92" onclick="takeColor('#fb6f92')"></div>
+                    <div class="color-option" style="background-color: #84ffc9" onclick="takeColor('#84ffc9')"></div>
+                    <div class="color-option" style="background-color: #ff6961" onclick="takeColor('#ff6961')"></div>
+                    <div class="color-option" style="background-color: #fdf4f5" onclick="takeColor('#fdf4f5')"></div>
+                    <div class="color-option" style="background-color: #d1d1d1" onclick="takeColor('#d1d1d1')"></div>
+                    <button type="submit">Add Task</button>
+                    <button type="button" onclick="hideNewTaskScreen()">Cancel</button>
+                    <!-- <div class="button-group">
+                <button onclick="hideColorPicker()">Cancel</button>
+                <button type="submit">Add Task</button>
+              </div> -->
+                </div>
+            </form>
+
+        </div>
+</div>
+        
+    </div>
+
+
+     
+
+<!-- <div class="footerdiv" style="background-color: #9381ff;">
+    bhnmbnbm
+</div>  -->
+
+
+    <footer class="footer">
+        <img src="./Images/footeer_logo.png" alt="">
+        <p>A simple todolist with inspiration from everywhere.</p>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p> ©2024 Do Docket.</p>
+
+    </footer>
+    <div id="whiteboardModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeWhiteboardPopup()">&times;</span>
+          <iframe id="whiteboardIframe" src="https://excalidraw.com/"></iframe>
+        </div>
+      </div>
+
+
+      <div id="timerModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeTimerPopup()">&times;</span>
+          <iframe id="timerIframe" src="https://app.flocus.com/"></iframe>
+        </div>
+      </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+<script>
+    function openWhiteboardPopup() {
+  var modal = document.getElementById('whiteboardModal');
+  modal.style.display = 'block';
+ 
+}
+
+// Function to close the whiteboard popup
+function closeWhiteboardPopup() {
+  var modal = document.getElementById('whiteboardModal');
+  modal.style.display = 'none';
+  
+}
+
+
+
+    function openTimerPopup() {
+  var modal1 = document.getElementById('timerModal');
+  modal1.style.display = 'block';
+ 
+}
+
+// Function to close the whiteboard popup
+function closeTimerPopup() {
+  var modal1 = document.getElementById('timerModal');
+  modal1.style.display = 'none';
+  
+}
+</script>
+    <script src="addtask.js"></script>
+    <script src="quotes.js"></script>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>

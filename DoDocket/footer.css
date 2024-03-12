@@ -1,0 +1,36 @@
+
+
+footer {
+    font-family: "Urbanist", sans-serif;
+    font-weight:200;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* position: absolute; */
+    /* bottom: -70px; */
+    width: 100%;
+    margin-top:-15px;
+    
+}
+footer img{
+    margin-left: 97px ;
+}
+
+footer p {
+    margin: 5px 0;
+    margin-left: 100px;
+}
+
+.social-media {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 5px;
+}
+.social-media p{
+  background-color: #04041b;
+}
