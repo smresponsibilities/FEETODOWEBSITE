@@ -7,7 +7,8 @@
 
 A responsive, zero-framework productivity dashboard and task manager built with vanilla JavaScript, HTML5, and modern CSS. Features task categorization, completion tracking, collapsible sidebar navigation, daily motivational quote rotation, and persistent client-side data storage.
 
-Project Reference: [Shivam Mahajan Portfolio](https://shivammahajan.com/) · [Projects](https://shivammahajan.com/projects/)
+Live App / Demo: [https://shivammahajan.com/FEETODOWEBSITE/](https://shivammahajan.com/FEETODOWEBSITE/)  
+Portfolio Architecture: [https://shivammahajan.com/projects/](https://shivammahajan.com/projects/)
 
 ---
 
